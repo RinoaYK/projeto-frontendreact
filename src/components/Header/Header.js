@@ -15,8 +15,10 @@ import {
   HeaderIcon,
   HeaderCart,
   LabEcommerce,
+  LabEcommerceGrid,
   IconCartStyle,
-  SearchCategoryStyle
+  SearchCategoryStyle,
+  SearchCategoryStyle1024
 } from './HeaderStyle'
 
 const Header = () => {
@@ -59,17 +61,18 @@ const Header = () => {
     <HeaderLayout isActive={isActive}>
       <div>
         {/* logo */}
-        <Link to={'/'}>
-          <LabEcommerce>
-            <img src={Logo} alt='Labenu logo' />
-            <h1>LabEcommerce</h1>
-          </LabEcommerce>
-        </Link>
+        <LabEcommerceGrid>
+          <Link to={'/'}>
+            <LabEcommerce>
+              <img src={Logo} alt='Labenu logo' />
+              <h1>LabEcommerce</h1>
+            </LabEcommerce>
+          </Link>
+        </LabEcommerceGrid>
 
         {/* categorias */}
         <SearchCategoryStyle>
           <button onClick={resetFilterType}>Todos</button>
-
           {categories.map(category => {
             return (
               <button key={category} onClick={() => setTypeFilter(category)}>
@@ -87,6 +90,27 @@ const Header = () => {
             ))}
           </select>
         </SearchCategoryStyle>
+
+        {/* search tela 1024 menores */}
+        <SearchCategoryStyle1024>
+          <select onChange={e => setTypeFilter(e.target.value)}>
+            <option value=''>Categorias</option>
+            {categories.map(category => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+
+          <select onChange={e => setMarcaFilter(e.target.value)}>
+            <option value=''> {`|  \u00A0 Marcas `}</option>
+            {marcas.map(marca => (
+              <option key={marca} value={marca}>
+                {marca}
+              </option>
+            ))}
+          </select>
+        </SearchCategoryStyle1024>
 
         {/* cart */}
         <HeaderCart onClick={() => setIsOpen(!isOpen)}>

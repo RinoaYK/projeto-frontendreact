@@ -18,14 +18,14 @@ import {
   ResetNameButton,
   NameInput,
   SelectInput,
-
   SliderRg1,
   SliderRg2,
-
+  SliderRgContainer
 } from './SearchbarStyle'
 
 const Searchbar = () => {
-  const { order,
+  const {
+    order,
     setOrder,
     nameSearch,
     setNameSearch,
@@ -34,13 +34,14 @@ const Searchbar = () => {
     maxPrice,
     setMaxPrice,
     resetFilters,
-    resetName } = useContext(SearchContext)
+    resetName
+  } = useContext(SearchContext)
 
   //valores  min e max dos inputs
   const minPriceValorMin = 1
-  const maxPriceValorMin = 50
+  const maxPriceValorMin = 99
 
-  const minPriceValorMax = 50
+  const minPriceValorMax = 2
   const maxPriceValorMax = 100
 
   //setando valores
@@ -54,17 +55,18 @@ const Searchbar = () => {
   return (
     <SearchbarContainer>
       <SearchbarItems>
-      <NameSearchStyle>
-        <FaSearch />
-        <NameInput
+        <NameSearchStyle>
+          <FaSearch />
+          <NameInput
             value={nameSearch}
             onChange={e => setNameSearch(e.target.value)}
             type='text'
             placeholder='Digite um nome'
           />
-        <ResetNameButton onClick={resetName}         
-        ><FaWindowClose/></ResetNameButton>
-      </NameSearchStyle>
+          <ResetNameButton onClick={resetName}>
+            <FaWindowClose />
+          </ResetNameButton>
+        </NameSearchStyle>
 
         <SelectInput value={order} onChange={e => setOrder(e.target.value)}>
           <option value=''>Preço</option>
@@ -72,61 +74,73 @@ const Searchbar = () => {
           <option value='decrescente'>Decrescente</option>
         </SelectInput>
 
-        
-        
-
         {/* min range */}
-        <NumberInputContainer>          
-            <NumberInputStyle
-              type='number'
-              value={minPrice}
-              onChange={handleMinPrice}
-              min={minPriceValorMin}
-              max={maxPriceValorMin}
-              placeholder='R$ mín'
-            />
-          
-          <div>
-            <SliderRange1            
+        <NumberInputContainer>
+          <NumberInputStyle
+            type='number'
+            value={minPrice}
+            onChange={handleMinPrice}
+            min={minPriceValorMin}
+            max={maxPriceValorMin}
+            placeholder='R$ mín'
+          />
+
+          <SliderRgContainer>
+            <SliderRg1>
+              <input
+                type='range'
+                value={minPrice}
+                onChange={handleMinPrice}
+                min={minPriceValorMin}
+                max={maxPriceValorMin}
+                className='range range-warning'
+              />
+            </SliderRg1>
+
+            {/* <SliderRange1            
               type='range'
               value={minPrice}
               onChange={handleMinPrice}
               min={minPriceValorMin}
               max={maxPriceValorMin}
-            />
-          {/* <Progress   type='range'/> */}
+            /> */}
+            {/* <Progress   type='range'/> */}
 
-          {/* max range */}
-          <SliderRange2           
+            {/* max range */}
+            <SliderRg2>
+              <input
+                type='range'
+                value={maxPrice}
+                onChange={handleMaxPrice}
+                min={minPriceValorMax}
+                max={maxPriceValorMax}
+                className='range range-warning'
+              />
+            </SliderRg2>
+            {/* <SliderRange2           
             type='range'
             value={maxPrice}
             onChange={handleMaxPrice}
             min={minPriceValorMax}
             max={maxPriceValorMax}
+          /> */}
+          </SliderRgContainer>
+
+          <NumberInputStyle
+            type='number'
+            value={maxPrice}
+            onChange={handleMaxPrice}
+            min={minPriceValorMax}
+            max={maxPriceValorMax}
+            placeholder='R$ max'
           />
-          </div>
-          
-            <NumberInputStyle
-              type='number'
-              value={maxPrice}
-              onChange={handleMaxPrice}
-              min={minPriceValorMax}
-              max={maxPriceValorMax}
-              placeholder='R$ max'
-            />
         </NumberInputContainer>
 
-
-        
-
-
-        <ResetButtonFilters onClick={resetFilters} >
-        <p>Resetar filtros</p>
-        <RxReset /></ResetButtonFilters>
+        <ResetButtonFilters onClick={resetFilters}>
+          <p>Resetar filtros</p>
+          <RxReset />
+        </ResetButtonFilters>
       </SearchbarItems>
-
-      
-
     </SearchbarContainer>
   )
 }

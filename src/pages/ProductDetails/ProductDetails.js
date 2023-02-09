@@ -29,7 +29,7 @@ const ProductDetails = () => {
   const product = products.find(item => {
     return item.id === parseInt(id)
   })
-  const { title, price, description, image, category, marca } = product
+  const { title, price, description, category, marca } = product
 
   //if product in not found
   if (!product) {
@@ -48,7 +48,7 @@ const ProductDetails = () => {
         <ImageWrapper>
           {/* image */}
           <ImagePD>
-            <img src={image} alt={title} />
+            <img src={`https://raw.githubusercontent.com/RinoaYK/projeto-frontendreact/main/src/img/items/img${id}.png`} alt={title} />
           </ImagePD>
 
           {/* text */}

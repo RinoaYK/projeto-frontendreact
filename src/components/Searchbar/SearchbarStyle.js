@@ -7,6 +7,11 @@ export const SearchbarContainer = styled.div`
   height: 3em;
   margin-top: 1em;
 
+    @media (max-width: 1024px) {      
+    flex-direction: column;    
+    height: 12em;
+    
+    }
 
 `;
 export const NameSearchStyle = styled.div`
@@ -18,15 +23,13 @@ export const NameSearchStyle = styled.div`
   background-color: white;
     color: #f47e20;
     font-size: 1.1rem;
-    padding-left: 0.5em;    
-
-
-
-
+    padding-left: 0.5em;  
     &:focus {
       border: none;
       outline: none;
     }
+
+
 `;
 export const ResetNameButton = styled.button`
   color: #f7e3d8;
@@ -48,6 +51,17 @@ export const SearchbarItems = styled.div`
   color: white;
   gap: 1em;
   border-radius: 1em;  
+  min-width: 17em;
+
+    @media (max-width: 1024px) {      
+    flex-direction: column;    
+    justify-content: center;
+    width: 70vw;
+    
+    }
+    
+
+
 `;
 export const NameInput = styled.input`
  background-color: white;
@@ -141,15 +155,26 @@ background-color: white;
 
 `
 ///////////////////////////
-export const SliderRg1 = styled.input` 
+export const SliderRg1 = styled.div`   
+  position: relative;
+  @media (max-width: 768px) {    
+     display: none;
+    }
+`
+
+export const SliderRg2 = styled.div`   
+  @media (max-width: 768px) {    
+     display: none;}
+
+`
+export const SliderRgContainer = styled.div` 
+  max-width: 260px;
+  display: flex;
+  cursor: pointer;  
 
 
 `
 
-export const SliderRg2 = styled.input` 
-
-
-`
 
 
 
@@ -166,6 +191,7 @@ export const SliderRange1 = styled.input`
   min-width: 50px;
   cursor: pointer;  
   position: relative;
+
 `
 export const SliderRange2 = styled.input`
   max-height: .4em;  
