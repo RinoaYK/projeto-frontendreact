@@ -6,19 +6,17 @@ export const Section = styled.section`
   padding-bottom: 4rem; /* 64px */
 `;
 export const Container = styled.div`
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
+  
   width: 100vw;  
   padding-right: 30px;
   padding-left: 30px;
-  margin-left: auto;
+  margin-left: -0.5em;
   margin-right: auto;
-
-  /* @media (min-width: 640px) {
-    max-width: 640px;
-  } */
+  
 `;
 
 export const Items = styled.div`
@@ -28,6 +26,7 @@ export const Items = styled.div`
   max-width: 20rem /* 384px */;
   margin-left: auto;
   margin-right: auto;
+  
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));

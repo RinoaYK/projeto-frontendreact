@@ -14,7 +14,7 @@ const Home = () => {
   const { products } = useContext(ProductContext)
   const { filterByType, filterByMarca, nameSearchIncludes, filterByPrice, order, sortItens } =
   useContext(SearchContext)   
-
+ 
   return (
     <>
       <HeaderCoupon />
@@ -27,7 +27,8 @@ const Home = () => {
               .filter(nameSearchIncludes)
               .filter(filterByPrice)
               .filter(filterByType)
-              .filter(filterByMarca)
+              .filter(filterByMarca)              
+              .sort(() => Math.random() - 0.5)
               .sort(sortItens(order))
               .map(product => {
                 return <Product product={product} key={product.id} />

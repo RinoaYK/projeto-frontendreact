@@ -17,6 +17,7 @@ position: relative;
   justify-content: space-between;
   padding-top: 1.5em;
   padding-bottom: 1em;
+  min-width: 15em;     
 `;
 export const PEachItemBgImg = styled.div`
   display: flex;
@@ -93,6 +94,7 @@ export const PIconEyesTamanho = styled.div`
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   :hover {
+    cursor: pointer;
     color: white;
     background-color: #f47e20;
     border: none;
@@ -110,6 +112,7 @@ export const PTitulo = styled.div`
     margin-top: 0.7rem /* 4px */;
     :hover {
       color: #f47e20;
+      cursor: pointer;
     }
   }
 `;
@@ -119,3 +122,80 @@ export const PPrice = styled.div`
 export const BsCartPlusStyle = styled.div`
   font-size: 1.4rem;
 `;
+
+export const ProductModal = styled.div`
+ width: 100%;
+ max-width: 60rem/* 1024px */;
+ display: flex;
+ gap: 2em;
+ align-items: center;
+ justify-content: center;
+
+`
+export const LadoEsq = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 1em;
+
+img{
+  width: 60em;
+}
+`
+
+export const LadoDir = styled.div`
+display: flex;
+flex-direction: column;
+gap: 1em;
+
+`
+
+export const CimaBaixo = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 1em;
+padding: 1em;
+`
+export const Cima = styled.div`
+display: flex;
+align-items: center;
+justify-content: start;
+width: 100%;
+`
+export const Baixo = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 3em;
+`
+export const PPriceModal = styled.div`
+display: flex;
+align-items: center;
+  font-weight: 600;
+  font-size: x-large;
+  height: 3em;
+  padding-left: 1em;
+  background-color: #f9eee8;
+  color: #F47E20;
+`;
+
+export const Stars = styled.div`
+align-self: flex-end;
+`
+
+export const ComprarFav = styled.div`
+display: flex;
+align-items: center;
+
+gap: 1em;
+`
+
+export const Heart = styled.div`
+	font-size: 2rem; /* 18px */
+line-height: 1.75rem; /* 28px */
+color: #F47E20;
+cursor: pointer;
+`
