@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PEachItemBg = styled.div`
-position: relative;
+  position: relative;
   background-color: white;
   border-radius: 1em;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
@@ -17,15 +17,15 @@ position: relative;
   justify-content: space-between;
   padding-top: 1.5em;
   padding-bottom: 1em;
-  min-width: 15em;     
-`;
+  min-width: 15em;
+`
 export const PEachItemBgImg = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   width: 100%;
-`;
-export const PImageAlign = styled.div`  
+`
+export const PImageAlign = styled.div`
   cursor: pointer;
   img {
     max-height: 160px;
@@ -34,7 +34,7 @@ export const PImageAlign = styled.div`
       transform: scale(1.1);
     }
   }
-`;
+`
 export const PIconPlus = styled.div`
   border-radius: 0.5em;
   display: flex;
@@ -52,7 +52,7 @@ export const PIconPlus = styled.div`
     color: white;
     background-color: #f47e20;
   }
-`;
+`
 export const DivLine = styled.div`
   display: flex;
   width: 100%;
@@ -60,31 +60,31 @@ export const DivLine = styled.div`
   flex-direction: column;
   padding-right: 1em;
   padding-left: 1em;
-`;
+`
 export const PDescription = styled.div`
   border-top: 1px solid #f7e3d8;
-  font-size: 0.875rem /* 14px */;
-  line-height: 1.25rem /* 20px */;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-transform: capitalize;
   color: rgb(107 114 128);
   padding-top: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  p{
-    color: #F47E20;
+  p {
+    color: #f47e20;
   }
-`;
+`
 export const PIconEyesTamanho = styled.div`
   border-radius: 0.5em;
-  font-size: 1.5rem /* 24px */;
-  line-height: 2rem /* 32px */;
+  font-size: 1.5rem;
+  line-height: 2rem;
   height: 3rem;
   width: 3rem;
   background-color: white;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   z-index: 1;
   position: absolute;
   top: 0.5em;
@@ -99,103 +99,124 @@ export const PIconEyesTamanho = styled.div`
     background-color: #f47e20;
     border: none;
   }
-`;
-export const PIconEyesTamanhoHover = styled.div`
-
-`;
+`
+export const PIconEyesTamanhoHover = styled.div``
 export const PTitulo = styled.div`
   h2 {
     font-weight: 800;
-    font-size: 1.2rem /* 24px */;
-    line-height: 1.4rem /* 32px */;
-    margin-bottom: 0.5rem /* 4px */;
-    margin-top: 0.7rem /* 4px */;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.7rem;
+    text-transform: capitalize;
     :hover {
       color: #f47e20;
+      text-decoration: underline;
+      text-underline-position: under;
       cursor: pointer;
     }
   }
-`;
+`
 export const PPrice = styled.div`
   font-weight: 500;
-`;
+`
 export const BsCartPlusStyle = styled.div`
   font-size: 1.4rem;
-`;
-
+`
+export const Modal = styled.div``
 export const ProductModal = styled.div`
- width: 100%;
- max-width: 60rem/* 1024px */;
- display: flex;
- gap: 2em;
- align-items: center;
- justify-content: center;
-
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 100em;
+  padding-left: 3em;
+  padding-right: 3em;
+  @media (max-width: 1024px) {
+    margin-left: 2em;
+    margin-right: 2em;
+    height: 50em;
+  }
+  @media (max-width: 768px) {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 `
 export const LadoEsq = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-gap: 1em;
-
-img{
-  width: 60em;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  width: 30em;
+  img {
+    width: 100%;
+    @media (max-width: 1024px) {
+      max-width: 60%;
+    }
+  }
 `
-
 export const LadoDir = styled.div`
-display: flex;
-flex-direction: column;
-gap: 1em;
-
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
 `
-
 export const CimaBaixo = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-gap: 1em;
-padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `
 export const Cima = styled.div`
-display: flex;
-align-items: center;
-justify-content: start;
-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  h2 {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
 `
 export const Baixo = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+  @media (max-width: 550px) {
+    max-width: 27em;
+  }
+  @media (max-width: 500px) {
+    max-width: 18em;
+  }
 `
 export const PPriceModal = styled.div`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
   font-weight: 600;
   font-size: x-large;
   height: 3em;
   padding-left: 1em;
   background-color: #f9eee8;
-  color: #F47E20;
-`;
-
+  color: #f47e20;
+`
 export const Stars = styled.div`
-align-self: flex-end;
+  align-self: flex-end;
 `
-
 export const ComprarFav = styled.div`
-display: flex;
-align-items: center;
-
-gap: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 `
-
 export const Heart = styled.div`
-	font-size: 2rem; /* 18px */
-line-height: 1.75rem; /* 28px */
-color: #F47E20;
-cursor: pointer;
+  font-size: 2rem;
+  line-height: 1.75rem;
+  color: #f47e20;
+  cursor: pointer;
 `

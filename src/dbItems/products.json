@@ -724,7 +724,7 @@
     "rating": 4.3,
     "numReviews": 60,
     "estoque": 50,
-    "descrição": "Esta divertida nave de encaixe é perfeita para crianças pequenas. Com peças coloridas e fáceis de encaixar, elas vão adorar brincar com sua imaginação e explorar o universo."
+    "description": "Esta divertida nave de encaixe é perfeita para crianças pequenas. Com peças coloridas e fáceis de encaixar, elas vão adorar brincar com sua imaginação e explorar o universo."
   },
   {
     "title": "Quadro interativo para crianças",
@@ -746,7 +746,7 @@
     "rating": 4.5,
     "numReviews": 150,
     "estoque": 200,
-    "descrição": "Experimente a emoção de lançar seu próprio foguete com o Aquapod. Este incrível brinquedo funciona a base de água e voa!"
+    "description": "Experimente a emoção de lançar seu próprio foguete com o Aquapod. Este incrível brinquedo funciona a base de água e voa!"
   },
   {
     "title": "Estação Espacial",

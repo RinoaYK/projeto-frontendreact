@@ -10,6 +10,16 @@ const ProductProvider = ({children}) => {
       setProducts(data);  
 }, []);  
 
+// const scrollBarsYes = () => {
+//   document.documentElement.style.overflow = 'auto';
+//   document.body.scroll = "yes"; // IE
+// }
+
+// const scrollBarsNo = () => {
+// document.documentElement.style.overflow = 'hidden';
+// document.body.scroll = "no"; // IE
+// }
+
   return <ProductContext.Provider value={{products}}>{children}</ProductContext.Provider>;
 };
 export default ProductProvider;

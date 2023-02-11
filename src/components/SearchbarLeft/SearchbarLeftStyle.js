@@ -1,18 +1,20 @@
 import styled from 'styled-components'
 
 export const SearchbarContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3em;
-  margin-top: 1em;
+  height: 20em;
+  width: 24em;
   @media (max-width: 1024px) {
-    flex-direction: column;
-    height: 12em;
+    width: 70%;
   }
-  @media (max-width: 768px) {
-     margin-top: 6em;
-    } 
+  @media (max-width: 750px) {
+    width: 80%;
+  }
+  @media (max-width: 620px) {
+    width: 85%;
+  }
+  @media (max-width: 540px) {
+    width: 100%;
+  }
 `
 export const NameSearchStyle = styled.div`
   display: flex;
@@ -40,20 +42,48 @@ export const ResetNameButton = styled.button`
 `
 export const SearchbarItems = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   background-color: #f47e20;
   height: 100%;
-  padding-left: 1em;
-  padding-right: 1em;
+  margin-left: -1em;
+  padding-left: 3em;
+  padding-right: 1.5em;
+  padding-top: 1em;
   color: white;
-  gap: 1em;
+  gap: 2em;
   border-radius: 1em;
-  min-width: 17em;
+  min-width: 20em;
+  flex-direction: column;
+  width: 100%;
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: -0.7em;
+
+    @media (max-width: 1024px) {
+      grid-column: span 2;
+      margin-bottom: -2em;
+      justify-self: start;
+    }
+    @media (max-width: 550px) {
+      margin-bottom: -1em;
+    }
+  }
   @media (max-width: 1024px) {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 30em;
+    margin-left: 0em;
+    align-content: space-around;
+    justify-items: center;
+  }
+  @media (max-width: 550px) {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    width: 70vw;
+    min-width: 0em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 `
 export const NameInput = styled.input`
@@ -90,6 +120,21 @@ export const NumberInputContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1em;
+  flex-direction: column;
+  @media (max-width: 1024px) {
+    grid-column: span 2;
+    margin-top: -1em;
+  }
+`
+export const NumberStyle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  p {
+    margin-bottom: -0.5em;
+    margin-top: -1em;
+  }
 `
 export const SelectInput = styled.select`
   background-color: white;
@@ -104,6 +149,9 @@ export const SelectInput = styled.select`
   cursor: pointer;
   option {
     color: #f47e20;
+  }
+  @media (max-width: 550px) {
+    margin-bottom: 1em;
   }
 `
 export const NumberInputStyle = styled.input`
@@ -145,31 +193,32 @@ export const NumberInputStyle = styled.input`
 ///////////////////////////
 export const SliderRg1 = styled.div`
   position: relative;
-  @media (max-width: 768px) {
-    display: none;
-  }
 `
-export const SliderRg2 = styled.div`
-  @media (max-width: 768px) {
-    display: none;
-  }
-`
+
+export const SliderRg2 = styled.div``
 export const SliderRgContainer = styled.div`
   max-width: 260px;
   display: flex;
   cursor: pointer;
 `
+//////////////////////////////
 export const ResetButtonFilters = styled.button`
   color: #f6b057;
   font-size: 1.3rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+  width: 100%;
   gap: 0.2em;
+  margin-top: -1em;
   p {
     font-size: 0.8rem;
   }
   :hover {
     color: white;
+  }
+  @media (max-width: 1024px) {
+    grid-column: span 2;
+    justify-self: end;
   }
 `

@@ -7,13 +7,3 @@
     @apply font-primary text-primary;
   }
 }
-
-body {
-background-image: url('./img/background.png');
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-
- }
-
- 

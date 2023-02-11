@@ -12,19 +12,19 @@ export const Coupon = styled.nav`
   border-radius: 0.3em;
   width: 18rem;
   font-weight: 800;
-  font-size: 1.5rem /* 24px */;
-  line-height: 2rem /* 32px */;
+  font-size: 1.5rem;
+  line-height: 2rem;
   > div {
     display: flex;
     gap: 0.5rem;
     margin-top: 0.2em;
     margin-right: 0.5rem;
   }
-`;
+`
 export const Desconto = styled.p`
   margin-top: -0.1em;
   margin-right: 0.1em;
-`;
+`
 export const Arrow = styled.p`
   color: #f6b057;
   font-size: 3rem;
@@ -32,7 +32,7 @@ export const Arrow = styled.p`
   position: absolute;
   top: -0.04em;
   left: 2.3em;
-`;
+`
 export const Conway = styled.div`
   height: 2.2rem;
   width: 6rem;
@@ -44,7 +44,7 @@ export const Conway = styled.div`
   justify-content: center;
   margin-top: -0.3em;
   display: flex;
-`;
+`
 export const ContourCoupon = styled.div`
   height: 3rem;
   display: flex;
@@ -53,7 +53,6 @@ export const ContourCoupon = styled.div`
   background-color: #f47e20;
   gap: 1rem;
   color: white;
-
   @media (max-width: 640px) {
     height: 3.5rem;
   }
@@ -74,20 +73,19 @@ export const ContourCoupon = styled.div`
       margin-left: 0em;
     }
   }
-`;
+`
 export const SlPresentDiv = styled.div`
   font-size: 1.875rem;
   line-height: 2.25rem;
   margin-top: -0.1em;
-`;
+`
 export const Timer = styled.div`
   position: absolute;
   right: 2em;
-
   @media (max-width: 640px) {
     display: none;
   }
   @media (max-width: 768px) {
     display: none;
   }
-`;
+`

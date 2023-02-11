@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const FooterStyle = styled.footer`
   background-color: #323b3f;
@@ -9,8 +9,7 @@ export const FooterStyle = styled.footer`
   padding-left: 2em;
   padding-right: 2em;
   padding-top: 1em;
-  padding-bottom: 0.5em; 
-
+  padding-bottom: 0.5em;
   @media (max-width: 1440px) {
     width: 100%;
     max-width: 1440px;
@@ -23,12 +22,11 @@ export const FooterStyle = styled.footer`
     padding-left: 1em;
     padding-right: 0.5em;
   }
-
   div > p {
     color: white;
-    text-align: center;    
+    text-align: center;
     @media (max-width: 1440px) {
-        font-size: 0.8em;
+      font-size: 0.8em;
       text-align: left;
     }
     @media (max-width: 640px) {
@@ -36,21 +34,20 @@ export const FooterStyle = styled.footer`
       text-align: left;
     }
   }
-`;
-export const Copyright = styled.div` 
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    @media (max-width: 1440px) {
-        flex-direction: column;
-        min-width: 6em;
-        gap: 0em;
+`
+export const Copyright = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  @media (max-width: 1440px) {
+    flex-direction: column;
+    min-width: 6em;
+    gap: 0em;
   }
-`;
+`
 export const RedesSociais = styled.div`
   display: flex;
   gap: 1.5em;
-
   @media (max-width: 640px) {
     gap: 1em;
   }
@@ -58,7 +55,7 @@ export const RedesSociais = styled.div`
     gap: 0.5em;
     flex-wrap: wrap;
   }
-`;
+`
 export const Linkedin = styled.div`
   color: white;
   font-size: 3rem;
@@ -67,16 +64,15 @@ export const Linkedin = styled.div`
   :hover {
     cursor: pointer;
   }
-  
   @media (max-width: 1440px) {
     font-size: 2.6rem;
     line-height: 0rem;
-    }
+  }
   @media (max-width: 640px) {
     font-size: 2rem;
     line-height: 0rem;
   }
-`;
+`
 export const GitHub = styled.div`
   color: white;
   font-size: 3rem;
@@ -85,16 +81,15 @@ export const GitHub = styled.div`
   > div:hover {
     cursor: pointer;
   }
-
   @media (max-width: 1440px) {
     font-size: 2.6rem;
     line-height: 0rem;
-    }
+  }
   @media (max-width: 640px) {
     font-size: 2rem;
     line-height: 0rem;
   }
-`;
+`
 export const Inta = styled.div`
   color: white;
   font-size: 3rem;
@@ -103,16 +98,15 @@ export const Inta = styled.div`
   :hover {
     cursor: pointer;
   }
-
   @media (max-width: 1440px) {
     font-size: 2.6rem;
     line-height: 0rem;
-    }
+  }
   @media (max-width: 640px) {
     font-size: 2rem;
     line-height: 0rem;
   }
-`;
+`
 export const YouTube = styled.div`
   color: white;
   font-size: 3rem;
@@ -121,16 +115,15 @@ export const YouTube = styled.div`
   :hover {
     cursor: pointer;
   }
-
   @media (max-width: 1440px) {
     font-size: 2.6rem;
     line-height: 0rem;
-    }
+  }
   @media (max-width: 640px) {
     font-size: 2rem;
     line-height: 0rem;
   }
-`;
+`
 export const DeviantArt = styled.div`
   color: white;
   font-size: 3rem;
@@ -142,9 +135,9 @@ export const DeviantArt = styled.div`
   @media (max-width: 1440px) {
     font-size: 2.6rem;
     line-height: 0rem;
-    }
+  }
   @media (max-width: 640px) {
     font-size: 2rem;
     line-height: 0rem;
   }
-`;
+`

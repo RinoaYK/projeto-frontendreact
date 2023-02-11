@@ -23,12 +23,10 @@ const checkoutAlert = () => {
     })
     .then(() => {
       Swals.fire({
-        title: 'Compra finalizada com sucesso!',
-        //   text: "LabEcommerce agradece!",
+        title: 'Compra finalizada com sucesso!',        
         icon: 'success',
         html: '<b>LabEcommerce</b>' + ' agradece!',
         confirmButtonColor: '#F47E20',
-
         showCloseButton: true,
         focusConfirm: false,
         inputAutoFocus: false,
@@ -38,7 +36,6 @@ const checkoutAlert = () => {
       })
     })
 }
-
 const CartProvider = ({ children }) => {
   // localStorage.removeItem("newCart");
   //pega os valores no local storage se existirem
@@ -61,7 +58,6 @@ const CartProvider = ({ children }) => {
       ? JSON.parse(localStorage.getItem('total'))
       : 0
   )
-
   //seta com os valores salvos no local Storage
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))
@@ -150,6 +146,7 @@ const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         cart,
+        setCart,
         addToCart,
         removeFromCart,
         clearCart,

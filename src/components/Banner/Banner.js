@@ -14,15 +14,20 @@ import {
   BannerStyled,
   BannerIcons,
   BannerImage,
-  BannerImageStyled
+  BannerImageStyled,
+  
 } from './BannerStyle'
 
+
 const Banner = () => {
+
   return (
     <BannerStyled>
       <BannerImage id='slide1'>
+        
         <img src={Banner1} alt='' />
-        <BannerImageStyled>
+
+        <BannerImageStyled>          
           <a href='#slide3'><BannerIcons><BsFillCaretLeftFill/></BannerIcons>            
           </a>
           <a href='#slide2'>
@@ -53,12 +58,7 @@ const Banner = () => {
           </a>
         </BannerImageStyled>
       </BannerImage>
-
-
-
-
-
-
+  
 
       {/* <BannerImage id='slide4'>
         <img src={Banner1} alt='' />

@@ -4,18 +4,16 @@ import { ProductContext } from '../../contexts/ProductContext'
 import { SearchContext } from '../../contexts/SearchContext'
 //import component
 import Product from '../../components/Product/Product'
-import Banner from '../../components/Banner/Banner'
-import HeaderCoupon from '../../components/HeaderCoupon/HeaderCoupon'
-import Searchbar from '../../components/Searchbar/Searchbar'
+import SearchbarLeft from '../../components/SearchbarLeft/SearchbarLeft'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 // import styled component
-import { Section, Container, Items, Background } from './HomeStyle'
+import { Section, Container, Items, Background } from './CategoryStyle'
 //import bg
-import background from '../../img/background.png'
+import background from '../../img/backgroundCategory.png'
 
-const Home = () => {
-  const { products } = useContext(ProductContext)
+const Category = () => {
+  const { products, scrollBarsNo } = useContext(ProductContext)
   const {
     filterByType,
     filterByMarca,
@@ -24,13 +22,12 @@ const Home = () => {
     order,
     sortItens
   } = useContext(SearchContext)
+
   return (
     <Background background={background}>
-      <HeaderCoupon />
       <Header />
-      <Banner />
-      <Searchbar />
       <Section>
+        <SearchbarLeft />
         <Container>
           <Items>
             {products
@@ -41,7 +38,13 @@ const Home = () => {
               .sort(() => Math.random() - 0.5)
               .sort(sortItens(order))
               .map(product => {
-                return <Product product={product} key={product.id} />
+                return (
+                  <Product
+                    product={product}
+                    key={product.id}
+                    scrollBarsNo={scrollBarsNo}
+                  />
+                )
               })}
           </Items>
         </Container>
@@ -51,4 +54,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Category
