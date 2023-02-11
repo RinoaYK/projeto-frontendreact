@@ -8,9 +8,11 @@ import SidebarProvider from './contexts/SidebarContext';
 import CartProvider from './contexts/CartContext';
 import DiscountProvider from "./contexts/DiscountContext";
 import SearchProvider from './contexts/SearchContext';
+import HeartProvider from './contexts/HeartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(  
+  <HeartProvider>
   <SearchProvider>
   <DiscountProvider>
     <SidebarProvider>
@@ -24,4 +26,5 @@ root.render(
     </SidebarProvider>  
     </DiscountProvider>
     </SearchProvider>
+    </HeartProvider>
 );

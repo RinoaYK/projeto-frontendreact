@@ -17,8 +17,9 @@ import {
   SelectInput,
   SliderRg1,
   SliderRg2,
-  SliderRgContainer
-} from './SearchbarStyle'
+  SliderRgContainer,
+  NumberStyle
+} from './SearchbarLeftStyle'
 
 const Searchbar = () => {
   const {
@@ -41,6 +42,7 @@ const Searchbar = () => {
   return (
     <SearchbarContainer>
       <SearchbarItems>
+        <h1>Filtros:</h1>
         <NameSearchStyle>
           <FaSearch />
           <NameInput
@@ -62,14 +64,28 @@ const Searchbar = () => {
 
         {/* min range */}
         <NumberInputContainer>
-          <NumberInputStyle
-            type='number'
-            value={minPrice}
-            onChange={handleMinPrice}
-            min={minPriceValorMin}
-            max={maxPriceValorMin}
-            placeholder='R$ mín'
-          />
+          <NumberStyle>
+            <p>Mínimo : </p>
+            <p>Máximo :</p>
+          </NumberStyle>
+          <NumberStyle>
+            <NumberInputStyle
+              type='number'
+              value={minPrice}
+              onChange={handleMinPrice}
+              min={minPriceValorMin}
+              max={maxPriceValorMin}
+              placeholder='R$ mín'
+            />
+            <NumberInputStyle
+              type='number'
+              value={maxPrice}
+              onChange={handleMaxPrice}
+              min={minPriceValorMax}
+              max={maxPriceValorMax}
+              placeholder='R$ max'
+            />
+          </NumberStyle>
 
           <SliderRgContainer>
             <SliderRg1>
@@ -95,15 +111,6 @@ const Searchbar = () => {
               />
             </SliderRg2>
           </SliderRgContainer>
-
-          <NumberInputStyle
-            type='number'
-            value={maxPrice}
-            onChange={handleMaxPrice}
-            min={minPriceValorMax}
-            max={maxPriceValorMax}
-            placeholder='R$ max'
-          />
         </NumberInputContainer>
 
         <ResetButtonFilters onClick={resetFilters}>

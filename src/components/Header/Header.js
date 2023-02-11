@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 // import contexts
 import { SidebarContext } from '../../contexts/SidebarContext'
 import { CartContext } from '../../contexts/CartContext'
@@ -22,6 +22,7 @@ import {
 } from './HeaderStyle'
 
 const Header = () => {
+  const { category } = useParams()
   const [isActive, setIsActive] = useState(false)
   const { isOpen, setIsOpen } = useContext(SidebarContext)
   const { itemAmount } = useContext(CartContext)
@@ -63,7 +64,7 @@ const Header = () => {
         {/* logo */}
         <LabEcommerceGrid>
           <Link to={'/'}>
-            <LabEcommerce>
+            <LabEcommerce onClick={resetFilterType}>
               <img src={Logo} alt='Labenu logo' />
               <h1>LabEcommerce</h1>
             </LabEcommerce>
@@ -72,19 +73,25 @@ const Header = () => {
 
         {/* categorias */}
         <SearchCategoryStyle>
-          <button onClick={resetFilterType}>Todos</button>
-          {categories.map(category => {
+          <Link to={`/category/${category}`}>
+            {' '}
+            <button onClick={resetFilterType}>Todos</button>{' '}
+          </Link>
+          {categories.map((category, id) => {
             return (
-              <button key={category} onClick={() => setTypeFilter(category)}>
-                {`|  \u00A0 ${category}`}
-              </button>
+              <Link to={`/category/${category}`}>
+                <button key={id} onClick={() => setTypeFilter(category)}>
+                  {`|  \u00A0 ${category}`}
+                </button>
+              </Link>
             )
           })}
 
+          {/* marcas */}
           <select onChange={e => setMarcaFilter(e.target.value)}>
             <option value=''> {`|  \u00A0 Marcas `}</option>
-            {marcas.map(marca => (
-              <option key={marca} value={marca}>
+            {marcas.map((marca, id) => (
+              <option key={id} value={marca}>
                 {marca}
               </option>
             ))}
@@ -92,20 +99,22 @@ const Header = () => {
         </SearchCategoryStyle>
 
         {/* search tela 1024 menores */}
+
         <SearchCategoryStyle1024>
           <select onChange={e => setTypeFilter(e.target.value)}>
             <option value=''>Categorias</option>
-            {categories.map(category => (
-              <option key={category} value={category}>
+            {categories.map((category, id) => (
+              <option key={id} value={category}>
                 {category}
               </option>
             ))}
           </select>
 
+          {/* marcas */}
           <select onChange={e => setMarcaFilter(e.target.value)}>
             <option value=''> {`|  \u00A0 Marcas `}</option>
-            {marcas.map(marca => (
-              <option key={marca} value={marca}>
+            {marcas.map((marca, id) => (
+              <option key={id} value={marca}>
                 {marca}
               </option>
             ))}

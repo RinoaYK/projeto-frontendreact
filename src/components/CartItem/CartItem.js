@@ -26,7 +26,7 @@ import {
 const CartItem = ({ item }) => {
   const { removeFromCart, increaseAmount, decreaseAmount } =
     useContext(CartContext)
-  const { id, title, image, price, amount } = item
+  const { id, title, price, amount } = item
 
   return (
     <Card>
@@ -34,7 +34,10 @@ const CartItem = ({ item }) => {
         {/* image */}
         <Link to={`/product/${id}`}>
           <ImgItem>
-            <img src={image} alt={title} />{' '}
+            <img
+              src={`https://raw.githubusercontent.com/RinoaYK/projeto-frontendreact/main/src/img/items/img${id}.png`}
+              alt={title}
+            />{' '}
           </ImgItem>
         </Link>
 
@@ -74,7 +77,6 @@ const CartItem = ({ item }) => {
               2
             )}`}</FinalPrice>
           </ItemsCol2>
-
         </InfosItems>
       </CardItems>
     </Card>
